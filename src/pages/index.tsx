@@ -44,7 +44,7 @@ export default function Home() {
         {loading ? <Load /> :
           countries.length > 0 ? countries.map((country, index) => (
             <Card data={country} key={index} />
-          )) : <p className="pt-20 ">Nenhum país encontrado</p>}
+          )) : <p className="pt-20 text-center">Nenhum país encontrado</p>}
       </Content>
     </Layout>
   );
