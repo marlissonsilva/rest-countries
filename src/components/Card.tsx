@@ -1,12 +1,12 @@
 import Image from "next/image"
 import { useRef } from "react"
-import Router from "next/router"
+import {useRouter} from "next/router"
 
 interface CardProps {
     data: any
 }
 export default function Card(props: CardProps) {
-    const router = Router
+    const router = useRouter()
     const nameRef = useRef<HTMLDivElement>(null)
     const { data } = props
 

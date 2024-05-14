@@ -1,4 +1,3 @@
-import { Inter } from "next/font/google";
 import Layout from "@/components/Layout";
 import ContainerInputs from "@/components/ContainerInputs";
 import Content from "@/components/Content";

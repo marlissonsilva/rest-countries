@@ -4,11 +4,11 @@ import { IconArrowNarrowLeft } from "@tabler/icons-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { baseUrl } from "@/data/url";
-import Router from "next/router";
+import { useRouter } from "next/router";
 import Load from "@/components/Load";
 
 export default function PageDetail(props: any) {
-    const router = Router
+    const router = useRouter()
     const [country, setCountry] = useState([])
     const [loading, setLoading] = useState(true)
     const { name } = router.query
