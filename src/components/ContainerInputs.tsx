@@ -27,7 +27,7 @@ export default function ContainerInputs(props: ContainerInputsProps) {
         }
     }
     return (
-        <div className="flex flex-col justify-between gap-10 p-6 mb-8
+        <section className="flex flex-col justify-between gap-10 p-6 mb-8
         sm:flex-row font-semibold">
             <div className="relative ">
                 <label htmlFor="search">
@@ -54,6 +54,6 @@ export default function ContainerInputs(props: ContainerInputsProps) {
                 <option value="europe" className="">Europe</option>
                 <option value="oceania" className="">Oceania</option>
             </select>
-        </div>
+        </section>
     )
 }

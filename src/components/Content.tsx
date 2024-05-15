@@ -4,8 +4,10 @@ interface ContentProps {
 }
 export default function Content(props: ContentProps) {
     return (
-        <div className={`${props.className}`}>
-            {props.children}
-        </div>
+        <main>
+            <section className={`${props.className}`}>
+                {props.children}
+            </section>
+        </main>
     )
 }
