@@ -11,8 +11,7 @@ export default function Header(props: HeaderProps) {
             <div className="container m-auto px-6 h-full
             flex justify-between items-center text-sm sm:text-base ">
                 <h1 className="font-extrabold">Where in the world?</h1>
-                <button className="btn flex items-center gap-2
-                hover:border"
+                <button className="btn flex items-center gap-2"
                     onClick={props.onClick}>
                     {exemplo ? <IconMoon /> : <IconSun />}
                     {exemplo ? <span className="font-semibold">Dark Mode</span> : <span className="font-semibold">Ligth Mode</span>}

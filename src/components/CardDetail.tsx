@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { baseUrl } from "@/data/url"
 import Image from "next/image"
+import Link from "next/link"
 
 interface CardDetailProps {
     data: any
@@ -31,7 +32,7 @@ export default function CardDetail(props: CardDetailProps) {
         <>
             {data.length > 0 ? (
                 <div className="lg:flex lg:justify-between gap-10">
-                    <Image src={country.flags.svg} alt="" width={200} height={100} className="w-full object-cover lg:w-[50%] lg:h-fit custom-shadow"/>
+                    <Image src={country.flags.svg} alt="" width={200} height={100} className="w-full object-cover lg:w-[50%] lg:h-fit custom-shadow" />
                     <div className="">
                         <h2 className="py-8 text-2xl font-extrabold lg:py-0 lg:pb-8">{country.name.common}</h2>
                         <div className="lg:flex lg:justify-between gap-56">
@@ -51,11 +52,15 @@ export default function CardDetail(props: CardDetailProps) {
                         </div>
                         <div className="pb-8 space-y-3">
                             <p className="font-semibold">Border Countries:</p>
-                            <div className="flex ">
-
+                            <div className="flex gap-4 flex-wrap">
+                                {country.borders && country.borders.map((border: string, index: number) => (
+                                    <span key={index} className="px-2 py-1 custom-shadow">{border}</span>
+                                ))}
                             </div>
                         </div>
-
+                        <Link href={country.maps.googleMaps} target="_blank" className="">
+                            <span className="btn custom-shadow font-semibold">See on map</span>
+                        </Link>
                     </div>
                 </div>) : (null)}
         </>
