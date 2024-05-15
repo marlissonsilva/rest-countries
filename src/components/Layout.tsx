@@ -9,7 +9,7 @@ interface LayoutProps {
     className?: string
 }
 
-const nunito_sans = Nunito_Sans({ subsets: ["latin"] });
+const nunito_sans = Nunito_Sans({ subsets: ["latin"], weight: ['300', '600', '800'] });
 
 export default function Layout(props: LayoutProps) {
     const [theme, setTheme] = useState('dark')
@@ -17,6 +17,7 @@ export default function Layout(props: LayoutProps) {
     function handleTheme() {
         theme === 'dark' ? setTheme('') : setTheme('dark')
     }
+
     return (
         <>
             <Head>

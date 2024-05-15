@@ -33,24 +33,24 @@ export default function CardDetail(props: CardDetailProps) {
                 <div className="lg:flex lg:justify-between gap-10">
                     <Image src={country.flags.svg} alt="" width={200} height={100} className="w-full object-cover lg:w-[50%] lg:h-fit custom-shadow" />
                     <div className="">
-                        <h3 className="py-8 text-2xl font-bold lg:py-0 lg:pb-8">{country.name.common}</h3>
+                        <h3 className="py-8 text-2xl font-extrabold lg:py-0 lg:pb-8">{country.name.common}</h3>
                         <div className="lg:flex lg:justify-between gap-56">
                             <div className="pb-8 space-y-3">
-                                <p><span className="font-bold">Native Name: </span>{getNativeName()}</p>
-                                <p><span className="font-bold">Population: </span>{country.population}</p>
-                                <p><span className="font-bold">Region: </span>{country.region}</p>
-                                <p><span className="font-bold">Sub Region: </span>{country.subregion}</p>
-                                <p><span className="font-bold">Capital: </span>{country.capital}</p>
+                                <p><span className="font-semibold">Native Name: </span>{getNativeName()}</p>
+                                <p><span className="font-semibold">Population: </span>{country.population}</p>
+                                <p><span className="font-semibold">Region: </span>{country.region}</p>
+                                <p><span className="font-semibold">Sub Region: </span>{country.subregion}</p>
+                                <p><span className="font-semibold">Capital: </span>{country.capital}</p>
                             </div>
 
                             <div className="pb-8 space-y-3">
-                                <p><span className="font-bold">Top Level Domain: </span>{country.tld}</p>
-                                <p><span className="font-bold">Currencies: </span>{getCurrencies()}</p>
-                                <p><span className="font-bold">Languages: </span>{getLanguages()}</p>
+                                <p><span className="font-semibold">Top Level Domain: </span>{country.tld}</p>
+                                <p><span className="font-semibold">Currencies: </span>{getCurrencies()}</p>
+                                <p><span className="font-semibold">Languages: </span>{getLanguages()}</p>
                             </div>
                         </div>
                         <div className="pb-8 space-y-3">
-                            <p className="font-bold">Border Countries:</p>
+                            <p className="font-semibold">Border Countries:</p>
                             <div className="flex ">
 
                             </div>

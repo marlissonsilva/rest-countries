@@ -24,11 +24,11 @@ export default function Card(props: CardProps) {
             onClick={handleClick}>
             <Image src={data.flags.svg} alt="" width={200} height={100} className="rounded-t-md h-[180px] w-full object-cover" />
             <div className="px-8">
-                <h3 className="py-8 text-2xl font-bold" ref={nameRef}>{data.name.common}</h3>
+                <h3 className="py-8 text-2xl font-extrabold" ref={nameRef}>{data.name.common}</h3>
                 <div>
-                    <p><span className="font-bold">Population: </span>{data.population}</p>
-                    <p><span className="font-bold">Region: </span>{data.region}</p>
-                    <p><span className="font-bold">Capital: </span>{data.capital}</p>
+                    <p><span className="font-semibold">Population: </span>{data.population}</p>
+                    <p><span className="font-semibold">Region: </span>{data.region}</p>
+                    <p><span className="font-semibold">Capital: </span>{data.capital}</p>
                 </div>
             </div>
         </div>

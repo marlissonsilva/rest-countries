@@ -18,6 +18,13 @@
   @apply py-4;
 }
 
+
+.custom-select option {
+  @apply font-semibold;
+}
+
+
+
 .mode-dark {
   @apply dark:bg-gray-800 dark:text-zinc-200;
 }
