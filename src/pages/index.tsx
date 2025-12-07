@@ -7,15 +7,11 @@ import Load from "@/components/Load";
 import { baseUrl } from "@/data/url";
 
 export default function Home() {
-  const [url, setUrl] = useState('all')
+  const [url, setUrl] = useState(`region/africa`)
   const [countries, setCountries] = useState([])
   const [loading, setLoading] = useState(true)
 
   function handleOptionChange(selectedValue: any) {
-    if (selectedValue === '') {
-      setUrl('all')
-      return
-    }
     setUrl(`region/${selectedValue}`);
   }
 
@@ -39,8 +35,7 @@ export default function Home() {
   return (
     <Layout>
       <ContainerInputs onOptionChange={handleOptionChange} onInputChange={handleInputChange} />
-      <Content className="flex flex-col sm:justify-center  flex-wrap gap-6 px-4
-        sm:flex-row sm:">
+      <Content className="grid sm:grid-cols-2 lg:grid-cols-4 gap-9 pb-10">
         {loading ? <Load /> :
           countries.length > 0 ? countries.map((country, index) => (
             <Card data={country} key={index} />

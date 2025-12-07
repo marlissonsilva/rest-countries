@@ -8,7 +8,7 @@ interface ContainerInputsProps {
 
 
 export default function ContainerInputs(props: ContainerInputsProps) {
-    const [selectedOption, setSelectedOption] = useState('');
+    const [selectedOption, setSelectedOption] = useState('africa');
     const [valueInput, setValueInput] = useState('')
 
     function handleInput(e: any) {
@@ -47,7 +47,6 @@ export default function ContainerInputs(props: ContainerInputsProps) {
              w-fit custom-shadow custom-select mode-dark"
                 value={selectedOption}
                 onChange={handleOptionSelect}>
-                <option value="">Filter by Region</option>
                 <option value="africa" className="">Africa</option>
                 <option value="america" className="">America</option>
                 <option value="asia" className="">Asia</option>

@@ -25,7 +25,7 @@ export default function Layout(props: LayoutProps) {
             </Head>
             <div className={`${theme} ${nunito_sans.className}`}>
                 <div className="dark:bg-gray-900 dark:text-zinc-200 text-sm">
-                    <Header onClick={handleTheme} />
+                    <Header onClick={handleTheme} isDark={theme}/>
                     <Content className={`container m-auto min-h-screen ${props.className}`}>
                         {props.children}
                     </Content>
